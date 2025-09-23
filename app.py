@@ -44,4 +44,4 @@ def metrics():
     return generate_latest(REGISTRY)
 
 if __name__ == '__main__':
-    app.run(debug=True) #This sets up a Flask app with a /predict endpoint that accepts JSON input (e.g., transaction data) and returns fraud predictions. It loads the saved model and scaler, ensuring consistency with training. The predict_proba method provides a confidence score, enhancing the API’s utility.
+    app.run(debug=True, use_reloader=False)  # Added use_reloader=False to prevent duplicate registration.  This sets up a Flask app with a /predict endpoint that accepts JSON input (e.g., transaction data) and returns fraud predictions. It loads the saved model and scaler, ensuring consistency with training. The predict_proba method provides a confidence score, enhancing the API’s utility.
