@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fraud Detector</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        form { max-width: 600px; }
+        label { display: block; margin: 5px 0; }
+        input { width: 100px; margin-bottom: 10px; }
+        button { padding: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Fraud Detection Demo</h1>
+    <form method="POST">
+        <label>Time: <input name="Time" type="number" step="any" value="0"></label>
+        <label>Amount: <input name="Amount" type="number" step="any" value="0"></label>
+        <label>V1: <input name="V1" type="number" step="any" value="0"></label>
+        <label>V2: <input name="V2" type="number" step="any" value="0"></label>
+        <label>V3: <input name="V3" type="number" step="any" value="0"></label>
+        <label>V4: <input name="V4" type="number" step="any" value="0"></label>
+        <label>V5: <input name="V5" type="number" step="any" value="0"></label>
+        <label>V6: <input name="V6" type="number" step="any" value="0"></label>
+        <label>V7: <input name="V7" type="number" step="any" value="0"></label>
+        <label>V8: <input name="V8" type="number" step="any" value="0"></label>
+        <label>V9: <input name="V9" type="number" step="any" value="0"></label>
+        <label>V10: <input name="V10" type="number" step="any" value="0"></label>
+        <label>V11: <input name="V11" type="number" step="any" value="0"></label>
+        <label>V12: <input name="V12" type="number" step="any" value="0"></label>
+        <label>V13: <input name="V13" type="number" step="any" value="0"></label>
+        <label>V14: <input name="V14" type="number" step="any" value="0"></label>
+        <label>V15: <input name="V15" type="number" step="any" value="0"></label>
+        <label>V16: <input name="V16" type="number" step="any" value="0"></label>
+        <label>V17: <input name="V17" type="number" step="any" value="0"></label>
+        <label>V18: <input name="V18" type="number" step="any" value="0"></label>
+        <label>V19: <input name="V19" type="number" step="any" value="0"></label>
+        <label>V20: <input name="V20" type="number" step="any" value="0"></label>
+        <label>V21: <input name="V21" type="number" step="any" value="0"></label>
+        <label>V22: <input name="V22" type="number" step="any" value="0"></label>
+        <label>V23: <input name="V23" type="number" step="any" value="0"></label>
+        <label>V24: <input name="V24" type="number" step="any" value="0"></label>
+        <label>V25: <input name="V25" type="number" step="any" value="0"></label>
+        <label>V26: <input name="V26" type="number" step="any" value="0"></label>
+        <label>V27: <input name="V27" type="number" step="any" value="0"></label>
+        <label>V28: <input name="V28" type="number" step="any" value="0"></label>
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction %}
+    <h3>Result</h3>
+    <p>Fraud: {{ 'Yes' if prediction.fraud else 'No' }} (Confidence: {{ prediction.score|round(2) }})</p>
+    {% endif %}
+</body>
+</html>
